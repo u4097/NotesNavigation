@@ -13,6 +13,20 @@
       app:destination="@id/notesFragment"/>
     <action
       android:id="@+id/action_notes_to_noteDetail"
-      app:destination="@id/notesFragment"/>
+      app:destination="@+id/noteDetailFragment"/>
+  </fragment>
+  <fragment
+    android:id="@+id/noteDetailFragment"
+    android:name="com.jshvarts.notesnavigation.presentation.notedetail.NoteDetailFragment"
+    android:label="NoteDetailFragment">
+    <argument
+      android:name="noteId"
+      app:argType="integer"/>
+    <action
+      android:id="@+id/action_noteDetail_to_editNote"
+      app:destination="@id/noteDetailFragment"/>
+    <action
+      android:id="@+id/action_noteDetail_to_deleteNote"
+      app:destination="@id/noteDetailFragment"/>
   </fragment>
 </navigation>

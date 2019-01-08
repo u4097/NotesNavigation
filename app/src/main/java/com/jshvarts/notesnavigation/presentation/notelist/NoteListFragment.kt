@@ -46,10 +46,10 @@ class NoteListFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this)[NoteListViewModel::class.java]
         viewModel.observableNoteList.observe(this, Observer { notes ->
-            notes?.let{render(notes)}
+            notes?.let { render(notes) }
         })
 
-        fab.setOnClickListener{
+        fab.setOnClickListener {
             findNavController().navigate(actionNotesToAddNote())
         }
     }
@@ -72,7 +72,7 @@ class NoteListFragment : Fragment() {
 
     private fun onNoteClicked(note: Note) {
         val navDirections = actionNotesToNoteDetail(note.id)
-        view?.let{
+        view?.let {
             findNavController().navigate(navDirections)
         }
     }
