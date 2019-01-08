@@ -10,7 +10,7 @@
     android:name="com.jshvarts.notesnavigation.presentation.notelist.NoteListFragment">
     <action
       android:id="@+id/action_notes_to_addNote"
-      app:destination="@id/notesFragment"/>
+      app:destination="@+id/addNoteFragment"/>
     <action
       android:id="@+id/action_notes_to_noteDetail"
       app:destination="@+id/noteDetailFragment"/>
@@ -29,4 +29,8 @@
       android:id="@+id/action_noteDetail_to_deleteNote"
       app:destination="@id/noteDetailFragment"/>
   </fragment>
+  <fragment
+    android:id="@+id/addNoteFragment"
+    android:name="com.jshvarts.notesnavigation.presentation.addnote.AddNoteFragment"
+    android:label="AddNoteFragment"/>
 </navigation>
