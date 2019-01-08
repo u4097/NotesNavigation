@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jshvarts.notesnavigation.R
 import com.jshvarts.notesnavigation.domain.Note
 import com.jshvarts.notesnavigation.presentation.notelist.NoteListFragmentDirections.actionNotesToAddNote
@@ -73,7 +74,16 @@ class NoteListFragment : Fragment() {
     }
 
     private fun onNoteClicked(note: Note) {
-        val navDirections = actionNotesToNoteDetail(note.id)
+        val navDirections = actionNotesToNoteDetail()
+        view?.let{
+            findNavController().navigate(navDirections)
+        }
+    }
+
+    private fun setupRecyclerView() {
+        notesRecyclerView.layoutManager = LinearLayoutManager(this.context)
+        notesRecyclerView.adapter = recyclerViewAdapter
+        notesRecyclerView.setHasFixedSize(true)
     }
 
 }
