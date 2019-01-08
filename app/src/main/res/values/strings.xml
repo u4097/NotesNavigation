@@ -18,4 +18,7 @@
     <string name="cancel_delete_button_text">Cancel</string>
     <string name="confirm_delete_button_text">Confirm Delete</string>
     <string name="error_deleting_note">Error deleting note</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

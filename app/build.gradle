@@ -56,4 +56,5 @@ dependencies {
 
     // Timber
     implementation "com.jakewharton.timber:timber:$timberVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
