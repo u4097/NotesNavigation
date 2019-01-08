@@ -7,5 +7,12 @@
   <fragment
     android:id="@+id/notesFragment"
     android:label="label_note_list"
-    android:name="com.jshvarts.notesnavigation.presentation.notelist.NoteListFragment"/>
+    android:name="com.jshvarts.notesnavigation.presentation.notelist.NoteListFragment">
+    <action
+      android:id="@+id/action_notes_to_addNote"
+      app:destination="@id/notesFragment"/>
+    <action
+      android:id="@+id/action_notes_to_noteDetail"
+      app:destination="@id/notesFragment"/>
+  </fragment>
 </navigation>
